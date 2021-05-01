@@ -66,3 +66,34 @@ chmod +x /tmp/strap/strap.sh
 /tmp/strap/strap.sh
 
 echo "Bloack Arch Repos added"
+
+## BlackArch-Fuzzers
+echo "Installing Fuzzers"
+echo ""
+sudo pacman -S ffuf feroxbuster fuzzdb zaproxy  wfuzz  sqlmap sqlbrute metasploit burpsuite
+
+## BlackArch-WebApp
+echo "---------Installing WebApps--------"
+echo ""
+sudo pacman -S droopescan drupwn gittools joomlascan joomscan laudanum nikto tplmap  wordpress-exploit-framework wordpresscan wpscan 
+sudo pacman -S autorecon awsbucketdump checksec cmsscan cmsscanner davtest davscan enum4linux-ng git-dumper nmap rustscan smbexec smbmap
+
+## BlackArch-Windows
+echo "---------Installing blackarch-windows---------"
+echo ""
+sudo pacman -S bloodhound bloodhound-python nishang  powersploit winexe
+
+## Black-ARch Disasseembler
+echo "---------Installing BlackArch-Disassemblers-----------"
+echo ""
+sudo pacman -S pwntools radare2 
+
+## BlackArch-Crackers
+sudo pacman -S cewl crunch fcrackzip hashcat hydra jwt-cracker john johnny kerbrute 
+
+## BlackArch Exploitation
+sudo pacman -S beef evil-winrm exploit-db exploitdb 
+
+## BlackArch Recon
+
+sudo pacman -S theharvester subfinder snmpcheck sherlock traceroute dnswalk dnsrecon 
