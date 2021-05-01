@@ -7,9 +7,9 @@ echo "Updating Repositories"
 sudo pacman -Syu
 echo ""
 
-# Install polybar
+# Install polybar xclip 
 
-sudo pacman -S polybar 
+sudo pacman -S polybar xclip
 
 ## Installing basic Linux Stuff
 # bat, autojump,
