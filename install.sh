@@ -1,11 +1,21 @@
 #!/bin/bash
 
-echo "Refreshing gpg-keys"
-sudo gpg --refresh-keys
+echo "Refreshing pacman-keys"
+sudo pacman-key --refresh-key
 
 echo "Updating Repositories"
 sudo pacman -Syu
 echo ""
+
+## installing font
+echo "[+] Installing Fonts" 
+mkdir /tmp/fonts
+
+curl https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -o /tmp/fonts/font1.ttf
+curl https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -o /tmp/fonts/font2.ttf
+curl https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -o /tmp/fonts/font3.ttf
+curl https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -o /tmp/fonts/font4.ttf
+font-manager -i /tmp/fonts/*
 
 
 # Install ohmyzsh
@@ -18,18 +28,23 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 
 
 # Install polybar xclip 
-
-sudo pacman -S polybar xclip brave-bin
-## Installing basic Linux Stuff
+# Installing basic Linux Stuff
 # bat, autojump,
+
+sudo pacman -S polybar xclip brave-bin bat fzf
+
 
 
 
 ## Get Awesome and termite config
 echo "----------Getting Config files from github.com/smash8tap/dotfiles----------"
-git clone git@github.com:smash8tap/dotfiles.git /tmp/dotfiles
+git clone https://github.com/smash8tap/dotfiles.git /tmp/dotfiles
+mv ~/.zshrc ~/.zshrc.bak
 cp /tmp/dotfiles/.zshrc ~/
+
+mv ~/.config/awesome ~/.config/awesome.bak
 cp /tmp/dotfiles/.config/awesome ~/.config/awesome -r 
+mv ~/.config/polybar ~/.config/polybar.bak 
 cp /tmp/dotfiles/.config/polybar ~/.config/polybar -r 
 echo ""
 
