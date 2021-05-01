@@ -1,0 +1,1 @@
+Install Script for Arch linux, to make it into a hacking distro
