@@ -86,7 +86,9 @@ sudo pacman -S bloodhound bloodhound-python nishang  powersploit winexe
 ## Black-ARch Disasseembler
 echo "---------Installing BlackArch-Disassemblers-----------"
 echo ""
-sudo pacman -S pwntools radare2 
+sudo pacman -S radare2 
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade pwntools
 
 ## BlackArch-Crackers
 sudo pacman -S cewl crunch fcrackzip hashcat hydra jwt-cracker john johnny kerbrute 
