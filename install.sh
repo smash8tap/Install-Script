@@ -81,7 +81,7 @@ sudo pacman -S autorecon awsbucketdump checksec cmsscan cmsscanner davtest davsc
 ## BlackArch-Windows
 echo "---------Installing blackarch-windows---------"
 echo ""
-sudo pacman -S bloodhound bloodhound-python nishang  powersploit winexe
+sudo pacman -S bloodhound bloodhound-python nishang  powersploit winexe windapsearch
 
 ## Black-ARch Disasseembler
 echo "---------Installing BlackArch-Disassemblers-----------"
