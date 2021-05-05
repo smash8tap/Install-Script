@@ -98,4 +98,4 @@ sudo pacman -S beef evil-winrm exploit-db exploitdb
 
 ## BlackArch Recon
 
-sudo pacman -S theharvester subfinder snmpcheck sherlock traceroute dnswalk dnsrecon 
+sudo pacman -S theharvester subfinder snmpcheck sherlock traceroute dnswalk dnsrecon dbeaver
